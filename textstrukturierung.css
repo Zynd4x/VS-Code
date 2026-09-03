@@ -1,0 +1,17 @@
+body{
+   margin: 15px;
+   
+}
+
+h1 {
+    color: red;
+}
+
+h2{
+    color: blue;
+}
+
+p{
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}

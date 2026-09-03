@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        table {
+            border: 5px solid orange;
+            width: 500px;
+        }
+        th, td {
+            padding: 3px 10px;
+            text-align: center;
+        }
+        #lo {
+            text-align: center;
+            background-color: #7d7d7d;
+            color: white;
+        }
+        #orga {
+            text-align:center;
+            background-color: #ff9d15;
+        }
+        .head {
+            background-color:blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr class="head">
+            <th>Scoller</th>
+            <th>Zielke</th>
+            <th>Dörge</th>
+            <th>Tullius</th>
+            <th>Schul</th>
+        </tr>
+        <tr>
+            <td>LF 1</td>
+            <td>LF 2</td>
+            <td>LF 3</td>
+            <td>LF 5</td>
+            <td rowspan="4" id="orga">Orga</td>
+        </tr>
+        <tr>
+            <td colspan="2">eLp 1-2</td>
+            <td colspan="2">eLp 3-4</td>
+        </tr>
+        <tr>
+            <td colspan="3">Theorie</td>
+            <td>Praxis</td>
+        </tr>
+        <tr>
+            <td colspan="4" id="lo">Fachunterricht</td>
+        </tr>
+    </table>
+</body>
+</html>
