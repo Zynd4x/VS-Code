@@ -4,8 +4,250 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(7, 7, 7);
+            font-family: "Oswald", sans-serif;
+            overflow: hidden;
+        }
+
+        .header {
+            display: flex;
+            width: 100%;
+            height: 65px;
+            padding-left: 10px;
+        }
+
+        .titel {
+            position: absolute;
+            text-align: left;
+            color: rgba(255, 255, 255, 0.89);
+            padding: 10px;
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .searchbar {
+            position: absolute;
+            margin: 10px 0;
+            width: 200px;
+            height: 45px;
+            border-radius: 30px;
+            border: none;
+            padding-right: 200px;
+            padding-left: 50px;
+            background-color: rgb(39, 39, 39);
+            font-family: "Oswald";
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .searchebar-container {
+            display: flex;
+            position: absolute;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .searchbar-icons {
+            z-index: 1;
+            display: flex;
+        }
+
+        .search-icon, .songs-folder-icon {
+            width: 22px;
+            position: relative;
+            margin: 22px 178px 20px 188px;
+            filter: invert(70%);
+        }
+
+        .songs-folder-icon {
+            border-left: solid 2px grey;
+            padding: 0 10px;
+        }
+
+        #nav {
+            display: flex;
+            position: absolute;
+            margin: 0 10px;
+            background-color: rgb(39, 39, 39);
+            color:  rgba(255, 255, 255, 0.849);
+            border-radius: 10px;
+            max-height: 640px;
+            max-width: 420px;
+            height:640px;
+
+        }
+
+        .nav-header {
+            padding: 10px 16px 8px 16px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .nav-header-title {
+            display: flex; 
+            margin-right: 120px;
+            align-items: center;
+            min-width: 0;
+            gap: 4px;
+        }
+
+        .nav-header-title-text {
+            font-size: 20px;
+        }
+
+        .nav-header-content {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            font-size: 16px;
+            height: 60px;
+            
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            
+        }
+
+        .nav-add-btn {
+            display: flex;
+            width: max-content;
+            align-items: center;
+            justify-content: center;
+            min-block-size: 35px;
+            min-inline-size: 35px;
+            height: 40px;
+            padding: 8px 16px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 20px;
+            font-family: "Oswald", sans-serif;
+            background-color: rgb(59, 59, 59);
+            color: rgba(245, 245, 245, 0.89);
+        }
+
+        .nav-add-button-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            filter: invert(70%);
+        }
+
+        .nav-button-arrow {
+            height: 30px;
+            cursor: pointer;
+            filter: invert(70%);
+            padding: 16px;
+        }
+
+        .nav-btn-2 {
+            position: relative;
+            display: flex;
+            gap: 6px;
+        }
+
+        .btn-2{
+            font-family: "Oswald", sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 4px 18px;
+            border-radius: 40px;
+            border: none;
+            background-color: rgb(59, 59, 59);
+            color: rgba(245, 245, 245, 0.89);
+        }
+
+        .nav-icons-2 {
+            display: flex;
+        }
+
+        .nav-icon-1, .nav-icon-2 {
+            display: flex; 
+            position: fixed;
+            z-index: 1;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            width: 34px;
+            filter: invert(60%);
+        }
+
+        .nav-icon-2 {
+            left: 380px;
+
+        }
+
+        .resizeObject {
+            display: flex;
+            position: relative;
+            
+            width: 62px;
+            height: 640px;
+            background-color: aliceblue;
+        }
+
+        .layoutResize {
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
-    
+    <header class="header">
+        <h1 class="titel">Music</h1>
+        <div class="searchebar-container">
+            <input type="text" placeholder="Search..." class="searchbar">
+            <div class="searchbar-icons">
+                <img src="loupe.png" class="search-icon"> 
+                <img src="songs-folder.png" class="songs-folder-icon">
+            </div>
+        </div>
+    </header>
+
+    <div id="left-sidebar">
+        <nav>
+            <div id="nav">
+                <header class="nav-header">
+                    <div class="nav-header-content">
+                        <div class="nav-header-title">
+                            <h1 class="nav-header-title-text" role="heading">Bibliothek</h1> 
+                        </div>
+                        <div class="nav-btn">
+                            <button class="nav-add-btn"><img src="plus.png" class="nav-add-button-icon">Erstellen</button>
+                            <img class="nav-button-arrow" src="diagonaler-pfeil.png">
+                        </div>
+                    </div>
+                    <div class="nav-header-2">
+                        <div class="nav-icons-2">
+                            <img src="previous.png" class="nav-icon-1">
+                            <img src="next.png" class="nav-icon-2">
+                        </div>
+                        <div class="nav-btn-2">
+                            <button class="btn-2">Playlist</button>
+                            <button class="btn-2">Künstler</button>
+                            <button class="btn-2">Alben</button>
+                            <button class="btn-2">Podcasts</button>
+                            <button class="btn-2">Hörbücher</button>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </nav>
+        <div class="resizeObject">
+            <label class="hidden-visually">
+                <input class="layoutResize" type="range" min="72" max="420" step="10" value="306">
+            </label> 
+            ::after
+        </div>
+    </div>
 </body>
 </html>
