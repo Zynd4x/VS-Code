@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <title>Frontend Mentor | QR code component</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+    body {
+      background-color: hsl(212, 45%, 89%);
+      font-family: "Outfit", sans-serif;
+      margin: auto;
+      min-height: 100vh;
+      max-width: 1440px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #QR-code-container {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 20px;
+    }
+
+    .image-container {
+      display: flex;
+      padding: 16px 16px 0 16px;
+    }
+
+    .text-container {
+      max-width: 260px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .text-2 {
+      font-size: 15px;
+      font-weight: 400;
+      padding-bottom: 20px;
+      color: hsl(216, 15%, 48%);
+    }
+
+    .text-1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: hsl(218, 44%, 22%);
+    }
+
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main id="QR-code-container">
+    <section class="image-container">
+      <img src="images/image-qr-code.png" alt="A white QR Code on a blue background" style="max-width: 290px; width: 100%; border-radius: 10px;">
+    </section>
+    <section class="text-container">
+      <p class="text-1">Improve your front-end skills by building projects</p>
+      <p class="text-2">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    </section>
+  </main>
+  
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Zynd4x">Zyndi</a>.
+  </footer>
+</body>
+</html>

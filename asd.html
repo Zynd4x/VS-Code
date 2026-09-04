@@ -186,19 +186,6 @@
             left: 380px;
 
         }
-
-        .resizeObject {
-            display: flex;
-            position: relative;
-            
-            width: 62px;
-            height: 640px;
-            background-color: aliceblue;
-        }
-
-        .layoutResize {
-            box-sizing: border-box;
-        }
     </style>
 </head>
 <body>
@@ -242,11 +229,8 @@
                 </header>
             </div>
         </nav>
-        <div class="resizeObject">
-            <label class="hidden-visually">
-                <input class="layoutResize" type="range" min="72" max="420" step="10" value="306">
-            </label> 
-            ::after
+        <div>
+            <input class="layoutResize" type="range" min="72" max="420" step="10" value="306">
         </div>
     </div>
 </body>
